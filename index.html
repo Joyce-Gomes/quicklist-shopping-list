@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quicklist</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo" aria-label="quicklist">
+          <img src="assets/logo.svg" alt="Quicklist logo">
+          <span class="logo-text">quicklist</span>
+        </div>
+      </header>
+
+      <main class="content">
+        <a class="back-link" href="#">← Voltar</a>
+        <h1>Compras da semana</h1>
+
+        <form class="add-form" id="add-form">
+          <label class="sr-only" for="item-input">Adicionar novo item</label>
+          <input
+            id="item-input"
+            type="text"
+            placeholder="Adicione um novo item"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Adicionar item</button>
+        </form>
+
+        <ul class="list" id="list" aria-live="polite"></ul>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <span class="toast-icon" aria-hidden="true">!</span>
+      <span class="toast-text">O item foi removido da lista</span>
+      <button class="toast-close" type="button" aria-label="Fechar aviso">×</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
